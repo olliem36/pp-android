@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dip"
+    android:gravity="center_horizontal" >
+
+    <EditText
+        android:id="@+id/etFolderName"
+        android:layout_width="242dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/folder_name" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnAddFolder"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/btnblue"
+        android:text="Add Folder"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

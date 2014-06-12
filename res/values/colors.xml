@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red">#900</color>
+    <color name="green">#090</color>
+    <color name="blue">#009</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    <color name="facebookblue">#4c66a4</color>
+    
+    <color name="blue_pressed">@android:color/holo_blue_dark</color>
+    <color name="blue_normal">@android:color/holo_blue_light</color>
+    <color name="green_complete">@android:color/holo_green_light</color>
+    <color name="purple_progress">@android:color/holo_purple</color>
+</resources>

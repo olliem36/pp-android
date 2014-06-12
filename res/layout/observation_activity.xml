@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" 
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Title"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:layout_alignParentRight="true"
+            android:id="@+id/editText_observation_title"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="Observation title"
+            android:textSize="10dp" >
+            <requestFocus />
+        </EditText>
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_date_time"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" 
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Date &amp; Time"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/btn_observation_date"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btnblue"
+            android:padding="0dp"
+            android:textSize="10dp"
+            android:text="02/09/1989 2:56pm"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_children_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#336699"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:text="Children"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:layout_alignParentRight="true" 
+            android:id="@+id/btn_add_children"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="0dp"
+            android:background="@drawable/btnblue"
+            android:textColor="#FFFFFF"
+            android:text="+" />
+    </RelativeLayout>
+
+       <ListView 
+        android:id="@+id/observation_children_list_view"
+  		android:layout_width="match_parent"
+  		android:layout_height="wrap_content"
+  		android:paddingLeft="@dimen/list_padding"
+  		android:paddingRight="@dimen/list_padding" />
+       
+    <RelativeLayout
+        android:id="@+id/layout_files_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#336699"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:text="Files"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:layout_alignParentRight="true" 
+            android:id="@+id/btn_add_file"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="0dp"
+            android:background="@drawable/btnblue"
+            android:textColor="#FFFFFF"
+            android:text="+" />
+    </RelativeLayout>
+
+       <ListView 
+        android:id="@+id/observation_files_list_view"
+  		android:layout_width="match_parent"
+  		android:layout_height="wrap_content"
+  		android:paddingLeft="@dimen/list_padding"
+  		android:paddingRight="@dimen/list_padding" />
+		            
+</LinearLayout>

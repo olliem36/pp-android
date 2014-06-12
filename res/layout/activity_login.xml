@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center_horizontal|center_vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/login_username"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:text="nicklockheart"
+                android:imeOptions="actionNext"
+                android:singleLine="true" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:text="monkey123"
+                android:singleLine="true"
+                android:inputType="textPassword" />
+
+            	<!-- 
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/btnblue"
+                android:text="Login"
+                android:textColor="#FFFFFF" />
+                 -->
+            
+            <com.dd.processbutton.iml.ActionProcessButton
+			    android:id="@+id/login_button"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginBottom="16dp"
+			    android:text="Sign in"
+			    android:textColor="@android:color/white"
+			    android:textSize="18sp"
+			    custom:colorComplete="@color/green_complete"
+			    custom:colorNormal="@color/blue_normal"
+			    custom:colorPressed="@color/blue_pressed"
+			    custom:colorProgress="@color/purple_progress"
+			    custom:completeText="Sign in"
+			    custom:progressText="Connecting..." />
+             
+            <ProgressBar
+                android:id="@+id/ProgressBar01"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_marginTop="20dip"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/spinner_blue_76"
+                android:indeterminateOnly="false" />
+
+        </LinearLayout>
+
+        
+    </RelativeLayout>
+
+</LinearLayout>

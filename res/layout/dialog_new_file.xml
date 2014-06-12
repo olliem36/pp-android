@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dip"
+    android:gravity="center_horizontal" >
+
+    <Button
+        android:id="@+id/btnCapturePhoto"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/btnblue"
+        android:text="Photo"
+        android:textColor="#FFFFFF" />
+    
+    <Button
+        android:id="@+id/btnCaptureVideo"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/btnblue"
+        android:text="Video"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnImportGallery"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/btnblue"
+        android:text="Gallery"
+        android:textColor="#FFFFFF" />
+    
+    
+</LinearLayout>

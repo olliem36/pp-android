@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:id="@+id/layout_children_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="Select Children"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:layout_alignParentRight="true" 
+            android:id="@+id/btn_select_children"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:padding="0dp"
+            android:background="@drawable/btnblue"
+            android:textColor="#FFFFFF"
+            android:text="Done" />
+    </RelativeLayout>
+
+    <ListView 
+          android:id="@+id/children_list_view"
+		  android:layout_width="match_parent"
+		  android:layout_height="match_parent"
+		  android:paddingLeft="@dimen/list_padding"
+		  android:paddingRight="@dimen/list_padding" />
+        
+</LinearLayout>
