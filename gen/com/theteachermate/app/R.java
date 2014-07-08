@@ -724,6 +724,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>margin</code></td><td>0</td><td></td></tr>
 <tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+<tr><td><code>none</code></td><td>2</td><td></td></tr>
 </table>
          */
         public static final int touchModeAbove=0x7f010068;
@@ -735,6 +736,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>margin</code></td><td>0</td><td></td></tr>
 <tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+<tr><td><code>none</code></td><td>2</td><td></td></tr>
 </table>
          */
         public static final int touchModeBehind=0x7f010069;
@@ -1105,107 +1107,108 @@ containing a value of this type.
         public static final int white_text_color_xml=0x7f02007e;
     }
     public static final class id {
-        public static final int ProgressBar01=0x7f04003b;
-        public static final int abs__action_bar=0x7f040025;
-        public static final int abs__action_bar_container=0x7f040024;
-        public static final int abs__action_bar_subtitle=0x7f040016;
-        public static final int abs__action_bar_title=0x7f040015;
-        public static final int abs__action_context_bar=0x7f040026;
+        public static final int ProgressBar01=0x7f04003c;
+        public static final int abs__action_bar=0x7f040026;
+        public static final int abs__action_bar_container=0x7f040025;
+        public static final int abs__action_bar_subtitle=0x7f040017;
+        public static final int abs__action_bar_title=0x7f040016;
+        public static final int abs__action_context_bar=0x7f040027;
         public static final int abs__action_menu_divider=0x7f04000c;
         public static final int abs__action_menu_presenter=0x7f04000d;
-        public static final int abs__action_mode_bar=0x7f04002a;
-        public static final int abs__action_mode_bar_stub=0x7f040029;
-        public static final int abs__action_mode_close_button=0x7f040019;
-        public static final int abs__activity_chooser_view_content=0x7f04001a;
-        public static final int abs__checkbox=0x7f040021;
-        public static final int abs__content=0x7f040027;
-        public static final int abs__default_activity_button=0x7f04001d;
-        public static final int abs__expand_activities_button=0x7f04001b;
+        public static final int abs__action_mode_bar=0x7f04002b;
+        public static final int abs__action_mode_bar_stub=0x7f04002a;
+        public static final int abs__action_mode_close_button=0x7f04001a;
+        public static final int abs__activity_chooser_view_content=0x7f04001b;
+        public static final int abs__checkbox=0x7f040022;
+        public static final int abs__content=0x7f040028;
+        public static final int abs__default_activity_button=0x7f04001e;
+        public static final int abs__expand_activities_button=0x7f04001c;
         public static final int abs__home=0x7f04000a;
-        public static final int abs__icon=0x7f04001f;
-        public static final int abs__image=0x7f04001c;
-        public static final int abs__imageButton=0x7f040017;
-        public static final int abs__list_item=0x7f04001e;
+        public static final int abs__icon=0x7f040020;
+        public static final int abs__image=0x7f04001d;
+        public static final int abs__imageButton=0x7f040018;
+        public static final int abs__list_item=0x7f04001f;
         public static final int abs__progress_circular=0x7f04000e;
         public static final int abs__progress_horizontal=0x7f04000f;
-        public static final int abs__radio=0x7f040022;
-        public static final int abs__search_badge=0x7f04002d;
-        public static final int abs__search_bar=0x7f04002c;
-        public static final int abs__search_button=0x7f04002e;
-        public static final int abs__search_close_btn=0x7f040033;
-        public static final int abs__search_edit_frame=0x7f04002f;
-        public static final int abs__search_go_btn=0x7f040035;
-        public static final int abs__search_mag_icon=0x7f040030;
-        public static final int abs__search_plate=0x7f040031;
-        public static final int abs__search_src_text=0x7f040032;
-        public static final int abs__search_voice_btn=0x7f040036;
-        public static final int abs__shortcut=0x7f040023;
-        public static final int abs__split_action_bar=0x7f040028;
-        public static final int abs__submit_area=0x7f040034;
-        public static final int abs__textButton=0x7f040018;
-        public static final int abs__title=0x7f040020;
+        public static final int abs__radio=0x7f040023;
+        public static final int abs__search_badge=0x7f04002e;
+        public static final int abs__search_bar=0x7f04002d;
+        public static final int abs__search_button=0x7f04002f;
+        public static final int abs__search_close_btn=0x7f040034;
+        public static final int abs__search_edit_frame=0x7f040030;
+        public static final int abs__search_go_btn=0x7f040036;
+        public static final int abs__search_mag_icon=0x7f040031;
+        public static final int abs__search_plate=0x7f040032;
+        public static final int abs__search_src_text=0x7f040033;
+        public static final int abs__search_voice_btn=0x7f040037;
+        public static final int abs__shortcut=0x7f040024;
+        public static final int abs__split_action_bar=0x7f040029;
+        public static final int abs__submit_area=0x7f040035;
+        public static final int abs__textButton=0x7f040019;
+        public static final int abs__title=0x7f040021;
         public static final int abs__up=0x7f04000b;
-        public static final int action_create_file=0x7f040062;
-        public static final int action_create_folder=0x7f040063;
-        public static final int action_create_observation=0x7f040066;
-        public static final int action_delete_file=0x7f040061;
-        public static final int action_save_observation=0x7f040065;
-        public static final int action_upload_file=0x7f040060;
-        public static final int btnAddFolder=0x7f040049;
-        public static final int btnCapturePhoto=0x7f040045;
-        public static final int btnCaptureVideo=0x7f040046;
-        public static final int btnImportGallery=0x7f040047;
-        public static final int btnPreviewFile=0x7f04005a;
-        public static final int btn_add_children=0x7f040053;
-        public static final int btn_add_file=0x7f040057;
-        public static final int btn_observation_date=0x7f040052;
-        public static final int btn_select_children=0x7f040042;
-        public static final int children_list_view=0x7f040043;
-        public static final int content_frame=0x7f040044;
+        public static final int action_create_file=0x7f040063;
+        public static final int action_create_folder=0x7f040064;
+        public static final int action_create_observation=0x7f040067;
+        public static final int action_delete_file=0x7f040062;
+        public static final int action_save_observation=0x7f040066;
+        public static final int action_upload_file=0x7f040061;
+        public static final int btnAddFolder=0x7f04004a;
+        public static final int btnCapturePhoto=0x7f040046;
+        public static final int btnCaptureVideo=0x7f040047;
+        public static final int btnImportGallery=0x7f040048;
+        public static final int btnPreviewFile=0x7f04005b;
+        public static final int btn_add_children=0x7f040054;
+        public static final int btn_add_file=0x7f040058;
+        public static final int btn_observation_date=0x7f040053;
+        public static final int btn_select_children=0x7f040043;
+        public static final int children_list_view=0x7f040044;
+        public static final int content_frame=0x7f040045;
         public static final int disableHome=0x7f040009;
-        public static final int editText_observation_title=0x7f04004f;
-        public static final int edit_item=0x7f040064;
-        public static final int edit_query=0x7f04002b;
-        public static final int etFolderName=0x7f040048;
-        public static final int files_list_view=0x7f04004a;
+        public static final int editText_observation_title=0x7f040050;
+        public static final int edit_item=0x7f040065;
+        public static final int edit_query=0x7f04002c;
+        public static final int etFolderName=0x7f040049;
+        public static final int files_list_view=0x7f04004b;
         public static final int fullscreen=0x7f040013;
         public static final int homeAsUp=0x7f040006;
-        public static final int img_checkbox=0x7f04003f;
-        public static final int img_preview_file=0x7f040059;
-        public static final int img_profile=0x7f04003c;
-        public static final int item_date=0x7f04003e;
-        public static final int item_text=0x7f04003d;
-        public static final int layout_children_title=0x7f040040;
-        public static final int layout_date_time=0x7f040050;
-        public static final int layout_files_title=0x7f040055;
-        public static final int layout_title=0x7f04004d;
+        public static final int img_checkbox=0x7f040040;
+        public static final int img_preview_file=0x7f04005a;
+        public static final int img_profile=0x7f04003d;
+        public static final int item_date=0x7f04003f;
+        public static final int item_text=0x7f04003e;
+        public static final int layout_children_title=0x7f040041;
+        public static final int layout_date_time=0x7f040051;
+        public static final int layout_files_title=0x7f040056;
+        public static final int layout_title=0x7f04004e;
         public static final int left=0x7f040010;
-        public static final int linearLayout1=0x7f040037;
+        public static final int linearLayout1=0x7f040038;
         public static final int listMode=0x7f040002;
-        public static final int login_button=0x7f04003a;
-        public static final int login_password=0x7f040039;
-        public static final int login_username=0x7f040038;
+        public static final int login_button=0x7f04003b;
+        public static final int login_password=0x7f04003a;
+        public static final int login_username=0x7f040039;
         public static final int margin=0x7f040012;
-        public static final int menu_frame=0x7f04004c;
-        public static final int menu_list_view=0x7f04005e;
+        public static final int menu_frame=0x7f04004d;
+        public static final int menu_list_view=0x7f04005f;
+        public static final int none=0x7f040014;
         public static final int normal=0x7f040001;
-        public static final int observation_children_list_view=0x7f040054;
-        public static final int observation_files_list_view=0x7f040058;
+        public static final int observation_children_list_view=0x7f040055;
+        public static final int observation_files_list_view=0x7f040059;
         public static final int right=0x7f040011;
-        public static final int row_icon=0x7f04005c;
-        public static final int row_title=0x7f04005d;
-        public static final int selected_view=0x7f040014;
+        public static final int row_icon=0x7f04005d;
+        public static final int row_title=0x7f04005e;
+        public static final int selected_view=0x7f040015;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
         public static final int showTitle=0x7f040007;
-        public static final int slidingmenumain=0x7f04005f;
-        public static final int switch_keep_on_device=0x7f04005b;
+        public static final int slidingmenumain=0x7f040060;
+        public static final int switch_keep_on_device=0x7f04005c;
         public static final int tabMode=0x7f040003;
-        public static final int textView1=0x7f04004e;
-        public static final int textView2=0x7f040051;
-        public static final int textView3=0x7f040041;
-        public static final int textView4=0x7f040056;
-        public static final int text_child_name=0x7f04004b;
+        public static final int textView1=0x7f04004f;
+        public static final int textView2=0x7f040052;
+        public static final int textView3=0x7f040042;
+        public static final int textView4=0x7f040057;
+        public static final int text_child_name=0x7f04004c;
         public static final int useLogo=0x7f040004;
         public static final int wrap_content=0x7f040000;
     }
@@ -2621,7 +2624,7 @@ containing a value of this type.
          */
         public static final int[] SherlockSpinner = {
             0x010100af, 0x01010175, 0x01010176, 0x0101017b,
-            0x01010262, 0x010102ac, 0x010102ad, 0x0101043a
+            0x01010262, 0x010102ac, 0x010102ad, 0x0101043d
         };
         /**
           <p>
@@ -3937,6 +3940,7 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>margin</code></td><td>0</td><td></td></tr>
 <tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+<tr><td><code>none</code></td><td>2</td><td></td></tr>
 </table>
           @attr name com.theteachermate.app:touchModeAbove
         */
@@ -3954,6 +3958,7 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>margin</code></td><td>0</td><td></td></tr>
 <tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+<tr><td><code>none</code></td><td>2</td><td></td></tr>
 </table>
           @attr name com.theteachermate.app:touchModeBehind
         */

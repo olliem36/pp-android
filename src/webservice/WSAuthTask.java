@@ -120,6 +120,7 @@ public class WSAuthTask extends AsyncTask<Object, String, String> {
 	    catch(Exception e){
 	    	e.printStackTrace();
 	    	Log.i("pp","error:" + e.getMessage());
+	    	
 	    	callback.loginCompleted(access_token); // error callback?
 	    }
 

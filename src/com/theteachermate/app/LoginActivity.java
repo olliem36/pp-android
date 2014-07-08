@@ -119,14 +119,15 @@ public class LoginActivity extends Activity implements LoginWSInterface
 	}
 	
 	@Override
-	public void loginCompleted(String access_token) {
-		// TODO Auto-generated method stub
-		if(access_token.length() == 0)
-		{
-			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+	public void loginCompleted(final String access_token) {
+
+		LoginActivity.this.runOnUiThread(new Runnable() {
+		    public void run() {
+		    	
+		if(access_token.length() == 0) {
+			final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(LoginActivity.this);
 			 
 			alertDialogBuilder.setTitle("Access Denied");
- 
 			alertDialogBuilder
 				.setMessage("Access Denied")
 				.setCancelable(false)
@@ -135,10 +136,10 @@ public class LoginActivity extends Activity implements LoginWSInterface
 						
 					}
 				  });
- 
-			AlertDialog alertDialog = alertDialogBuilder.create();
-			alertDialog.show();	
-			
+	    	
+	    	AlertDialog alertDialog = alertDialogBuilder.create();
+	    	alertDialog.show();
+	    	
 			progressBar.setVisibility(View.GONE);
 			//btnLogin.setVisibility(View.VISIBLE);
 			txtUsername.setEnabled(true);
@@ -158,5 +159,6 @@ public class LoginActivity extends Activity implements LoginWSInterface
 		txtUsername.setEnabled(true);
 		txtPassword.setEnabled(true);
 		btnLogin.setProgress(100);
+		}});
 	}
 }
