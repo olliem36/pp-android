@@ -3,7 +3,9 @@ package com.theteachermate.app;
 import java.util.ArrayList;
 import java.util.Date;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -55,9 +57,7 @@ public class FileFragment extends SherlockFragment {
 	public void onActivityCreated(Bundle savedInstanceState) {
 	    super.onActivityCreated(savedInstanceState);
 	    
-	    //setup the UI
 		btnPreviewFile = (Button) getView().findViewById(R.id.btnPreviewFile);
-
 		btnPreviewFile.setOnClickListener(BtnPreviewFileClickListener);
 
 	    setHasOptionsMenu(true);
@@ -67,10 +67,8 @@ public class FileFragment extends SherlockFragment {
 	private OnClickListener BtnPreviewFileClickListener = new OnClickListener() {
 	    @Override
 	    public void onClick(final View v) {
-
 	    	previewFile();
 	    }
-	    
 	};
 	
 	private void previewFile(){
@@ -98,11 +96,34 @@ public class FileFragment extends SherlockFragment {
 		switch (item.getItemId()) 
 		{
 		case R.id.action_delete_file:
-			//newFileDialog();
+			DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+			    @Override
+			    public void onClick(DialogInterface dialog, int which) {
+			        switch (which){
+			        case DialogInterface.BUTTON_POSITIVE:
+			        	dbaFileSystem.deleteFile(file);
+			        	if (getActivity() instanceof FragmentChangeActivity) {
+			    			FragmentChangeActivity fca = (FragmentChangeActivity) getActivity();
+			    			fca.getSupportFragmentManager().popBackStack();
+			    		}
+			            break;
+			        case DialogInterface.BUTTON_NEGATIVE:
+			            break;
+			        }
+			    }
+			};
+
+			AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+			builder.setMessage("Do you want to delete this file?").setPositiveButton("Delete", dialogClickListener)
+			    .setNegativeButton("No", dialogClickListener).show();
+
 			return true;
 		
 		case R.id.action_upload_file:
-			//newFolderDialog();
+			if (getActivity() instanceof FragmentChangeActivity) {
+				FragmentChangeActivity fca = (FragmentChangeActivity) getActivity();
+				fca.getSupportFragmentManager().popBackStack();
+			}
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
