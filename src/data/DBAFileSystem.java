@@ -1,6 +1,7 @@
 package data;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import utils.Utils;
 
@@ -106,6 +107,14 @@ public class DBAFileSystem {
 		return files;
 	}
 	
+	public void deleteFile(File file)
+	{
+		ContentValues values = new ContentValues();
+		values.put("bin", 1); 
+		values.put("fileModified", new Date().toGMTString());
+
+		myDataBase.update("tbl_file", values, "mobileFileID="+file.mobileID, null);
+	}
 	public int createFolder(Folder folder, int userID)
 	{
 		ContentValues values = new ContentValues();

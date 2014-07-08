@@ -119,44 +119,40 @@ public class LoginActivity extends Activity implements LoginWSInterface
 	}
 	
 	@Override
-	public void loginCompleted(String access_token) {
-		// TODO Auto-generated method stub
-		if(access_token.length() == 0)
-		{
-			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-			 
-			alertDialogBuilder.setTitle("Access Denied");
- 
-			alertDialogBuilder
-				.setMessage("Access Denied")
-				.setCancelable(false)
-				.setPositiveButton("OK",new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog,int id) {
-						
-					}
-				  });
- 
-			AlertDialog alertDialog = alertDialogBuilder.create();
-			alertDialog.show();	
-			
-			progressBar.setVisibility(View.GONE);
-			//btnLogin.setVisibility(View.VISIBLE);
-			txtUsername.setEnabled(true);
-			txtPassword.setEnabled(true);
-			btnLogin.setProgress(100);
+	public void loginCompleted(final String access_token, final String message) {
 
-			return;
-		}
-		
-		downloadChildren(access_token);
-		
-		Intent myIntent = new Intent(LoginActivity.this, FragmentChangeActivity.class);
-		LoginActivity.this.startActivity(myIntent);
-		
-		progressBar.setVisibility(View.GONE);
-		//btnLogin.setVisibility(View.VISIBLE);
-		txtUsername.setEnabled(true);
-		txtPassword.setEnabled(true);
-		btnLogin.setProgress(100);
+		this.runOnUiThread(new Runnable() {
+		    public void run() {
+				
+				progressBar.setVisibility(View.GONE);
+				//btnLogin.setVisibility(View.VISIBLE);
+				txtUsername.setEnabled(true);
+				txtPassword.setEnabled(true);
+				btnLogin.setProgress(100);	
+				
+				if(access_token.length() == 0) { 
+					AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(LoginActivity.this);
+					 
+					alertDialogBuilder.setTitle("Access Denied");
+					alertDialogBuilder
+						.setMessage(message)
+						.setCancelable(false)
+						.setPositiveButton("OK",new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog,int id) {
+								
+							}
+						  });
+					
+					AlertDialog alertDialog = alertDialogBuilder.create();
+					alertDialog.show();		
+					
+					return;	
+				}
+
+				Intent myIntent = new Intent(LoginActivity.this, FragmentChangeActivity.class);
+				LoginActivity.this.startActivity(myIntent);
+				downloadChildren(access_token);				
+		    }
+		});
 	}
 }

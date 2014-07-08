@@ -186,7 +186,7 @@ public class FragmentChangeActivity extends BaseActivity {
 	        		file.fileSizeBytes = 0;
 	        		file.name = "New video";
 	        		file.realName = mediaGUID;
-	        		file.MIMEType = "video/*";
+	        		file.MIMEType = "video/mp4";
 	        		
 	        		dbaFileSystem.createFile(file, userID);
 	        	}

@@ -26,6 +26,7 @@ public class WSAuthTask extends AsyncTask<Object, String, String> {
 	private Context ctx;
 	private DBAUser dbaUser;
 	private LoginWSInterface callback;
+	private String userMessage = "";
 	
 	@Override
 	protected String doInBackground(Object... params) 
@@ -54,32 +55,25 @@ public class WSAuthTask extends AsyncTask<Object, String, String> {
 	        
 	        BufferedReader bfr=new BufferedReader(new InputStreamReader(huc.getInputStream()));
 	        
-	        
 	        String line;
-	        while((line=bfr.readLine())!=null)
-	        {
+	        while((line=bfr.readLine())!=null) {
 	        	Log.i("pp", "reponse line: " + line);
-	        		        	
-		        //JSONArray jsa=new JSONArray(line);
-	        	
+	        		        		        	
 	        	JSONObject jsa = new JSONObject(line);
 	        	
 	        	Object responseObject = jsa.get("response");
 	        	
-	        	if(responseObject instanceof String)
-	        	{
+	        	if(responseObject instanceof String) {
 	        		error = (String) responseObject;
 		        	Log.i("pp", "response error: " + error);
-	        	}
-	        	else if(responseObject instanceof JSONObject)
-	        	{
+		        	userMessage = error;
+	        	} else if(responseObject instanceof JSONObject) {
 	        		JSONObject responseDict = (JSONObject) responseObject;
 	        		access_token = responseDict.getString("authTicket");
 	        		
 	        		String firstname = responseDict.getString("firstname");
         			String surname = responseDict.getString("surname");
         			Integer userID = responseDict.getInt("userID");
-        			//Integer userTypeID = responseDict.getInt("userTypeID");
         			String email = responseDict.getString("email");
         			
         			Log.i("pp", "auth completed:");
@@ -107,6 +101,8 @@ public class WSAuthTask extends AsyncTask<Object, String, String> {
 	    			prefs.edit().putInt("userID", user.mobileUserID).commit();
 	    			Log.i("pp", "saved (commit2) local userID:" + user.mobileUserID);
 	    			
+	        	}else{
+	        		userMessage = "Sorry, there was an unexpected response from the server";
 	        	}
 	        	
 		        //for(int i=0;i<jsa.length();i++)
@@ -120,16 +116,15 @@ public class WSAuthTask extends AsyncTask<Object, String, String> {
 	    catch(Exception e){
 	    	e.printStackTrace();
 	    	Log.i("pp","error:" + e.getMessage());
-	    	callback.loginCompleted(access_token); // error callback?
+	    	callback.loginCompleted(access_token, e.getMessage()); // error callback?
 	    }
 
 		return access_token;
 	}
 
-	protected void onPostExecute(String access_token) 
-	{
+	protected void onPostExecute(String access_token) {
 		Log.i("pp", "Finished with access_token: " + access_token);	
-		callback.loginCompleted(access_token);
+		if(userMessage == null){ userMessage = ""; }
+ 		callback.loginCompleted(access_token, userMessage);
     }
-	
 }
