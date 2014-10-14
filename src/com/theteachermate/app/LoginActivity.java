@@ -119,17 +119,18 @@ public class LoginActivity extends Activity implements LoginWSInterface
 	}
 	
 	@Override
-	public void loginCompleted(final String access_token) {
+	public void loginCompleted(final String access_token, final String error) {
 
 		LoginActivity.this.runOnUiThread(new Runnable() {
 		    public void run() {
-		    	
+		    
+		    	/*
 		if(access_token.length() == 0) {
 			final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(LoginActivity.this);
 			 
-			alertDialogBuilder.setTitle("Access Denied");
+			alertDialogBuilder.setTitle("Error");
 			alertDialogBuilder
-				.setMessage("Access Denied")
+				.setMessage(error)
 				.setCancelable(false)
 				.setPositiveButton("OK",new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog,int id) {
@@ -148,7 +149,8 @@ public class LoginActivity extends Activity implements LoginWSInterface
 
 			return;
 		}
-		
+		*/
+		    	
 		downloadChildren(access_token);
 		
 		Intent myIntent = new Intent(LoginActivity.this, FragmentChangeActivity.class);

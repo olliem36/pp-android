@@ -121,7 +121,7 @@ public class WSAuthTask extends AsyncTask<Object, String, String> {
 	    	e.printStackTrace();
 	    	Log.i("pp","error:" + e.getMessage());
 	    	
-	    	callback.loginCompleted(access_token); // error callback?
+	    	callback.loginCompleted(access_token, e.getMessage()); // error callback?
 	    }
 
 		return access_token;
@@ -130,7 +130,7 @@ public class WSAuthTask extends AsyncTask<Object, String, String> {
 	protected void onPostExecute(String access_token) 
 	{
 		Log.i("pp", "Finished with access_token: " + access_token);	
-		callback.loginCompleted(access_token);
+		callback.loginCompleted(access_token, "");
     }
 	
 }
